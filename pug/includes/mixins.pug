@@ -1,0 +1,90 @@
+mixin getListado(objLista)
+        each obj in objLista
+            .d-flex.align-items-center.justify-content-center.mt-3.item-list
+                if(obj.icon != "fas fa-circle")
+                    img(src=`${obj.icon}`, alt="", width="30", height="30").p-1
+                else
+                    i(class=`${obj.icon} fa-xs text-info`)
+
+                li.ml-2.mr-3.my-3
+                    p.m-0.open-sans-300= obj.name 
+
+mixin getListadoCheck(objLista)
+        each obj in objLista
+            .d-flex.align-items-center.justify-content-start.item-list-check
+                if(obj.icon != "fas fa-circle")
+                    img(src=`${obj.icon}`, alt="", width="30", height="30").p-1
+                else
+                    i(class=`${obj.icon} fa-xs text-info`)
+
+                li.ml-2.mr-3.my-3
+                    p.m-0.open-sans-300= obj.name 
+
+mixin getListadoModal(obj)
+        .d-flex.align-items-center.justify-content-start
+            if(obj.icon != "fas fa-circle")
+                img(src=`${obj.icon}`, alt="", width="30", height="30").p-1
+            else
+                i(class=`${obj.icon} fa-xs text-info m-2`)
+            p.mx-2.my-2.open-sans-300= obj.name 
+
+
+mixin contactForm()
+    <form class="text-center white p-3 rounded-lg open-sans z-depth-2" action="#!">
+        <p class="h4 mb-4">Contacto</p>
+        <input type="text" id="contact-name" class="form-control mb-4" placeholder="Nombre">
+        <input type="email" id="contact-email" class="form-control mb-4" placeholder="E-mail">
+        <label>Asunto</label>
+        <select class="browser-default custom-select mb-4">
+            <option value="" disabled>Elegir una opcion</option>
+            <option value="1" selected>Consulta</option>
+            <option value="2">Trabajo a realizar</option>
+        </select>
+        <div class="form-group">
+            <textarea class="form-control rounded-0" id="contact-message" rows="3" placeholder="Mensaje"></textarea>
+        </div>
+        <div class="custom-control custom-checkbox mb-4">
+            <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+            <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
+        </div>
+        <button class="btn btn-info btn-block" type="submit">Enviar</button>
+    </form>
+
+
+mixin modal(fullProduct)
+    each fp in fullProduct
+        .modal.fade.open-sans(id=`${fp.id}` tabindex="-1" role="dialog" aria-labelledby=`${fp.id}` aria-hidden="true")
+            <div class="modal-dialog" role="document">
+                <div class="modal-content ">
+                    <div class="modal-header rounded-xl bg-info z-depth-1-half border border-0 position-relative z-index-5">
+                        .text-white
+                            h3.modal-title.open-sans-700.text-shadow= fp.title
+                            p.open-sans.font-small.d-inline-block.m-0.text-shadow.text-uppercase= fp.text
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body position-relative z-index-5">
+                        p.open-sans-700.text-uppercase.spancing-2.text-info.m-0 Incluye:
+                        +contentModal(fp)
+                    </div>
+                </div>
+            </div>
+
+mixin contentModal(fullProduct)
+    -let { features } = fullProduct;
+    each f in features
+        +getListadoModal(f)
+
+
+mixin card(fullProduct)
+    .row
+        each fp in fullProduct
+            .col-12.col-sm-12.col-md-4.mb-4
+                - let { cardData } = fp;
+                .card.text-center.open-sans.position-relavite.z-index-4.rounded-xl.z-depth-2.w-75.mx-auto(class=`${cardData.class}`)
+                    .position-relavite.z-index-5
+                        .card-body.card-inner.z-depth-1-half
+                            h2.text-uppercase.font-weight-bold.spacing-2= cardData.name
+                            p.open.sans-300.card-text= cardData.description
+                            button(type="button", class="btn btn-black rounded-xl open-sans-700 spacing-2", data-toggle="modal", data-target=`#${fp.id}`) saber mas

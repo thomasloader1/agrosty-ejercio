@@ -1,0 +1,97 @@
+@import "mixins";
+@import "hamburgerMenu";
+@import 'fonts';
+
+.d-grid {
+  display: grid;
+}
+
+.rounded-xl{
+    border-radius: 0.7rem;
+}
+
+.text-shadow{
+    text-shadow: 2px 2px 3px rgba($color: #000000, $alpha: 0.2);
+}
+
+.card{  
+    @for $i from 0 through 2{    
+        &-back-img-#{$i}{
+            background: {
+                image: url("../img/assets/producto-card-#{$i}.png");
+                size: cover;
+                repeat: no-repeat;
+                position: center;   
+            }
+            position: relative;
+            z-index: 1;
+            @include maskAfter(true);
+        }
+    }
+    &-inner{
+        background-color: white;
+        border-radius: 1rem 1rem 0.7rem 0.7rem;
+        padding: 1rem;
+        margin-top: 10rem;
+    }
+}
+
+
+body{
+    grid-template: {
+        columns: 1fr;
+        rows: repeat(3, 100%)
+    }
+    background: transparent;
+    header{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    main{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    footer{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    &:after{
+        content: "";
+        width: 100%;
+        height: 700px;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        background: {
+            image: url("../img/assets/img-inicio.jpg");
+            position: center;
+            size: cover;
+            repeat: no-repeat;
+        }
+    }
+}
+
+@for $i from 0 through 100 {
+    .spacing-#{$i} {
+        letter-spacing: #{$i}px;
+    }
+    .font-#{$i} {
+        font-size: #{$i}rem;
+    }
+    .z-index-#{$i}{
+        z-index: #{$i};
+    }
+    .top-#{$i}{
+        top: #{$i}px;
+    }
+    .right-#{$i}{
+        right: #{$i}px;
+    }
+    .left-#{$i}{
+        left: #{$i}px;
+    }
+    .bottom-#{$i}{
+        bottom: #{$i}px;
+    }
+}

@@ -1,0 +1,140 @@
+extends ../templates/template.pug
+block append config
+    - titlePage = "Inicio"
+
+block append content
+    .container-fluid
+        .row
+            .col-12
+                .card.my-5
+                    .card-header.d-flex.justify-content-between.align-items-center
+                        h4.card-title.mb-0.h4 Nueva obserbacion
+                        .btns
+                            a.btn.btn-white.btn-sm(href="#") Volver
+                            a.btn.btn-info.btn-sm(href="#") Guardar observacion
+                    .card-body
+                        form.px-3
+                            .form-row.my-3
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="id-accion") ID Accion
+                                        select#id-accion.browser-default.custom-select
+                                            option(selectted) - 
+                                            option(value="1") Uno 
+                                            option(value="2") Dos 
+                                            option(value="3") Tres 
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="date-picker") Fecha
+                                        input#date-picker(type="text", name="date").form-control.datepicker
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="sector") Sector
+                                        select#sector.browser-default.custom-select
+                                            option(selectted) - 
+                                            option(value="1") Galpon Uno 
+                                            option(value="2") Galpon Dos 
+                                            option(value="3") Galpon Tres 
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="riesgo") Riesgo asociado / Estandar
+                                        select#riesgo.browser-default.custom-select
+                                            option(selectted) - 
+                                            option(value="1") Otras formas 1
+                                            option(value="2") Otras formas 2 
+                                            option(value="3") Otras formas 3 
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="nivel-riesgo") Nivel de riesgo
+                                        select#nivel-riesgo.browser-default.custom-select
+                                            option(selectted) - 
+                                            option(value="1") NO ACEPTABLE
+                                            option(value="2") ACEPTABLE 
+                                            option(value="3") A CONFIRMAR 
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="generado") Generado por
+                                        select#generado.browser-default.custom-select
+                                            option(selectted) - 
+                                            option(value="1") Incidentes
+                                            option(value="2") ACEPTABLE 
+                                            option(value="3") A CONFIRMAR 
+                            .form-row.my-3
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .form-group.d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="text-area-AC") Accion Correctiva
+                                        textarea.form-control.rounded-0#text-area-AC(rows="3")
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .form-group.d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="text-area-comentario") Comentario
+                                        textarea.form-control.rounded-0#text-area-comentario(rows="3")
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .form-group.d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="text-area-DR") Descripcion del riesgo
+                                        textarea.form-control.rounded-0#text-area-DR(rows="3")
+                            .form-row.my-5
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="plazo-ejecucion-inicial") Plazo ejecucion inicial
+                                        input#plazo-ejecucion-inicial(type="text", name="plazo-ejecucion-inicial").form-control.datepicker
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="reprogramacion") Reprogramacion
+                                        input#reprogramacion(type="text", name="reprogramacion").form-control
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="status") Status
+                                        select#status.browser-default.custom-select
+                                            option(selectted) - 
+                                            option(value="1") CUMPLIDO
+                                            option(value="2") PENDIENTE
+                                            option(value="3") ESPERA
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="fecha-cierre") Fecha de cierre
+                                        input#fecha-cierre(type="text", name="fecha-cierre").form-control
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="vencimiento") Vencimiento
+                                        input#vencimiento(type="text", name="vencimiento").form-control
+                            .form-row.my-3
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="res-seguimiento-cierre") Resp. seguimiento y cierre
+                                        input#res-seguimiento-cierre(type="text", name="res-seguimiento-cierre").form-control
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="sector-detecta-obs") Sector que detecta la obs
+                                        select#sector-detecta-obs.browser-default.custom-select
+                                            option(selectted) - 
+                                            option(value="1") 1
+                                            option(value="2") 2
+                                            option(value="3") 3
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="sector-responsable") Sector responsable
+                                        select#sector-responsable.browser-default.custom-select
+                                            option(selectted) - 
+                                            option(value="1") 1
+                                            option(value="2") 2
+                                            option(value="3") 3
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="observacion") Observacion
+                                        textarea.form-control.rounded-0#observacion(rows="1")
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="req-evicencia") Requiere evidencia
+                                        select#req-evicencia.browser-default.custom-select
+                                            option(selectted) - 
+                                            option(value="1") Si
+                                            option(value="2") No
+                            .form-row.my-3
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="evidencia-cierre") Evidencia de cierre
+                                        input#evidencia-cierre(type="text", name="evidencia-cierre").form-control
+                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
+                                    .d-flex.align-items-center.justify-content-around.flex-column
+                                        label(for="resp-seguimiento-cierre") Resp seguimiento y cierre
+                                        input#resp-seguimiento-cierre(type="text", name="resp-seguimiento-cierre").form-control

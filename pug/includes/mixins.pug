@@ -9,6 +9,51 @@ mixin getListado(objLista)
                 li.ml-2.mr-3.my-3
                     p.m-0.open-sans-300= obj.name 
 
+// MIXIN ESPECIALES
+
+mixin customSelect(entity, arr)
+    - let { id, text } = entity;
+        .col-sm-6.col-md-4.col-xl-2.d-flex.align-items-stretch.justify-content-center.py-2.flex-column
+                label(for=`${id}`).font-weight-bold.mb-2 #[i.far.fa-dot-circle.text-warning.mr-2 ] #{text}
+                select(id=`${id}`).browser-default.custom-select
+                    option(selected) - 
+                    each a, i in arr
+                        option(value=`${i}`) #{a} 
+
+mixin customTextarea(entity)
+    - let { id, text, rows= 3 } = entity;
+        .col-sm-6.col-md-4.col-xl-2.d-flex.align-items-stretch.justify-content-center.py-2.flex-column
+            label(for=`${id}`).font-weight-bold.mb-2 #[i.far.fa-dot-circle.text-warning.mr-2 ] #{text}
+            textarea.form-control.rounded-0(id=`${id}`,rows=`${rows}`)
+
+mixin customInputText(entity)
+    - let { id, text } = entity;
+        .col-sm-6.col-md-4.col-xl-2.d-flex.align-items-stretch.justify-content-center.py-2.flex-column
+            label(for=`${id}`).font-weight-bold.mb-2 #[i.far.fa-dot-circle.text-warning.mr-2 ] #{text}
+            input(id=`${id}`, type="text", name=`${id}`).form-control
+
+mixin customDatepicker(entity)
+    - let { id, text, typeName } = entity;
+        .col-sm-6.col-md-4.col-xl-2.d-flex.align-items-stretch.justify-content-center.py-2.flex-column
+            label(for=`${id}`).font-weight-bold.mb-2 #[i.far.fa-dot-circle.text-warning.mr-2 ] #{text}
+            input(id=`${id}`,type="text", name=`${typeName}`).form-control.datepicker
+
+mixin customMaterialInput(input)
+    - let { id, type="text", text } = input;
+        //- Material input 
+        .md-form
+            if id === "user"
+                i.fas.fa-envelope.prefix(id=`${id}-icon`)
+                input.form-control(id=`${id}`, type=`${type}`)
+                label(for=`${id}`) #{text}
+            else
+                i.fas.fa-lock.prefix(id=`${id}-icon`)
+                input.form-control(id=`${id}`, type=`${type}`)
+                label(for=`${id}`) #{text}
+
+
+// MIXIN ESPECIALES
+
 mixin getListadoCheck(objLista)
         each obj in objLista
             .d-flex.align-items-center.justify-content-start.item-list-check

@@ -1,14 +1,19 @@
 @import "mixins";
 @import "hamburgerMenu";
 @import 'fonts';
+@import 'login';
+
+label{
+    font-size: 14px ;
+    @media (min-width:360) {
+        font-size: 12px;
+    }
+}
 
 .d-grid {
   display: grid;
 }
 
-.rounded-xl{
-    border-radius: 0.7rem;
-}
 
 .text-shadow{
     text-shadow: 2px 2px 3px rgba($color: #000000, $alpha: 0.2);
@@ -46,7 +51,7 @@ body{
         letter-spacing: #{$i}px;
     }
     .font-#{$i} {
-        font-size: #{$i}rem;
+        font-size: #{$i}px;
     }
     .z-index-#{$i}{
         z-index: #{$i};

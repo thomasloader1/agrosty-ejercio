@@ -1,24 +1,20 @@
 .elegant-color-dark.vh-100
     .container
         .row
-            .col-sm-12.col-md-7.mx-auto.my-3
-                .card.card-body#login
-                    img(src="./img/perfil.png", height="80", width="80").d-block.mx-auto.my-3
+            section#grid-login
+                .card.z-depth-0.rounded-xl#login
+                    .card-body
+                        img(src="./img/perfil.png", height="80", width="80").d-block.mx-auto.my-3
 
-                    .form-group
-                        label(for="user") Usuario
-                        input#user(type="text", name="user").form-control
-                    
-                    .form-group
-                        label(for="password") Password
-                        input#password(type="password", name="password").form-control
-                    
-                    .d-flex.my-2.justify-content-around.align-items-center
-                        button#login-dash.btn.btn-info(type="button",href="dash.html").rounded-xl Login
-                        a.btn(href="#").rounded-xl Olvido su password?
+                        +customMaterialInput({ id:"user", text:"Usuario" })
+                        +customMaterialInput({ id:"password",type:"password", text:"Password" })
+                        
+                        .d-flex.my-2.justify-content-around.align-items-center.font-20
+                            button#login-dash.btn.btn-dark.font-weight-bold(type="button",href="dash.html") Login
+                            a(href="#").btn.z-depth-0.text-dark.text-center Olvido su password?
 
-                .card.card-body.mt-3.p-1
-                    a.btn.btn-info(href="#").rounded-xl.z-depth-0.w-75.mx-auto Registrarse
-        .row
-            .col-7.offset-5.mx-auto
-                #error-login.alert.alert-danger.text-center.d-none(role=alert)
+                    hr.boldered    
+                    a(href="#").spacing-3.w-75.mx-auto.mb-5.mt-4.text-uppercase.font-weight-bold.text-dark.text-center Registrarse
+        .row.pt-4
+            .col-5.offset-7.mx-auto
+                #error-login.alert.alert-danger.text-center.text-uppercase.font-small.spacing-1.d-none(role=alert)

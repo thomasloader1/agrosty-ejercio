@@ -3,6 +3,10 @@
   font-size: 0.55rem !important;
 }
 
+.rounded-xl {
+  border-radius: 3.5rem;
+}
+
 .item-list li > p {
   font-size: 18px;
 }
@@ -204,12 +208,31 @@
   font-weight: 700;
 }
 
-.d-grid {
-  display: grid;
+#grid-login {
+  width: 400px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 200px;
 }
 
-.rounded-xl {
-  border-radius: 0.7rem;
+.boldered {
+  border: 10px solid #212121;
+}
+
+label {
+  font-size: 14px;
+}
+@media (min-width: 360) {
+  label {
+    font-size: 12px;
+  }
+}
+
+.d-grid {
+  display: grid;
 }
 
 .text-shadow {
@@ -300,7 +323,7 @@
 }
 
 .font-0 {
-  font-size: 0rem;
+  font-size: 0px;
 }
 
 .z-index-0 {
@@ -328,7 +351,7 @@
 }
 
 .font-1 {
-  font-size: 1rem;
+  font-size: 1px;
 }
 
 .z-index-1 {
@@ -356,7 +379,7 @@
 }
 
 .font-2 {
-  font-size: 2rem;
+  font-size: 2px;
 }
 
 .z-index-2 {
@@ -384,7 +407,7 @@
 }
 
 .font-3 {
-  font-size: 3rem;
+  font-size: 3px;
 }
 
 .z-index-3 {
@@ -412,7 +435,7 @@
 }
 
 .font-4 {
-  font-size: 4rem;
+  font-size: 4px;
 }
 
 .z-index-4 {
@@ -440,7 +463,7 @@
 }
 
 .font-5 {
-  font-size: 5rem;
+  font-size: 5px;
 }
 
 .z-index-5 {
@@ -468,7 +491,7 @@
 }
 
 .font-6 {
-  font-size: 6rem;
+  font-size: 6px;
 }
 
 .z-index-6 {
@@ -496,7 +519,7 @@
 }
 
 .font-7 {
-  font-size: 7rem;
+  font-size: 7px;
 }
 
 .z-index-7 {
@@ -524,7 +547,7 @@
 }
 
 .font-8 {
-  font-size: 8rem;
+  font-size: 8px;
 }
 
 .z-index-8 {
@@ -552,7 +575,7 @@
 }
 
 .font-9 {
-  font-size: 9rem;
+  font-size: 9px;
 }
 
 .z-index-9 {
@@ -580,7 +603,7 @@
 }
 
 .font-10 {
-  font-size: 10rem;
+  font-size: 10px;
 }
 
 .z-index-10 {
@@ -608,7 +631,7 @@
 }
 
 .font-11 {
-  font-size: 11rem;
+  font-size: 11px;
 }
 
 .z-index-11 {
@@ -636,7 +659,7 @@
 }
 
 .font-12 {
-  font-size: 12rem;
+  font-size: 12px;
 }
 
 .z-index-12 {
@@ -664,7 +687,7 @@
 }
 
 .font-13 {
-  font-size: 13rem;
+  font-size: 13px;
 }
 
 .z-index-13 {
@@ -692,7 +715,7 @@
 }
 
 .font-14 {
-  font-size: 14rem;
+  font-size: 14px;
 }
 
 .z-index-14 {
@@ -720,7 +743,7 @@
 }
 
 .font-15 {
-  font-size: 15rem;
+  font-size: 15px;
 }
 
 .z-index-15 {
@@ -748,7 +771,7 @@
 }
 
 .font-16 {
-  font-size: 16rem;
+  font-size: 16px;
 }
 
 .z-index-16 {
@@ -776,7 +799,7 @@
 }
 
 .font-17 {
-  font-size: 17rem;
+  font-size: 17px;
 }
 
 .z-index-17 {
@@ -804,7 +827,7 @@
 }
 
 .font-18 {
-  font-size: 18rem;
+  font-size: 18px;
 }
 
 .z-index-18 {
@@ -832,7 +855,7 @@
 }
 
 .font-19 {
-  font-size: 19rem;
+  font-size: 19px;
 }
 
 .z-index-19 {
@@ -860,7 +883,7 @@
 }
 
 .font-20 {
-  font-size: 20rem;
+  font-size: 20px;
 }
 
 .z-index-20 {
@@ -888,7 +911,7 @@
 }
 
 .font-21 {
-  font-size: 21rem;
+  font-size: 21px;
 }
 
 .z-index-21 {
@@ -916,7 +939,7 @@
 }
 
 .font-22 {
-  font-size: 22rem;
+  font-size: 22px;
 }
 
 .z-index-22 {
@@ -944,7 +967,7 @@
 }
 
 .font-23 {
-  font-size: 23rem;
+  font-size: 23px;
 }
 
 .z-index-23 {
@@ -972,7 +995,7 @@
 }
 
 .font-24 {
-  font-size: 24rem;
+  font-size: 24px;
 }
 
 .z-index-24 {
@@ -1000,7 +1023,7 @@
 }
 
 .font-25 {
-  font-size: 25rem;
+  font-size: 25px;
 }
 
 .z-index-25 {
@@ -1028,7 +1051,7 @@
 }
 
 .font-26 {
-  font-size: 26rem;
+  font-size: 26px;
 }
 
 .z-index-26 {
@@ -1056,7 +1079,7 @@
 }
 
 .font-27 {
-  font-size: 27rem;
+  font-size: 27px;
 }
 
 .z-index-27 {
@@ -1084,7 +1107,7 @@
 }
 
 .font-28 {
-  font-size: 28rem;
+  font-size: 28px;
 }
 
 .z-index-28 {
@@ -1112,7 +1135,7 @@
 }
 
 .font-29 {
-  font-size: 29rem;
+  font-size: 29px;
 }
 
 .z-index-29 {
@@ -1140,7 +1163,7 @@
 }
 
 .font-30 {
-  font-size: 30rem;
+  font-size: 30px;
 }
 
 .z-index-30 {
@@ -1168,7 +1191,7 @@
 }
 
 .font-31 {
-  font-size: 31rem;
+  font-size: 31px;
 }
 
 .z-index-31 {
@@ -1196,7 +1219,7 @@
 }
 
 .font-32 {
-  font-size: 32rem;
+  font-size: 32px;
 }
 
 .z-index-32 {
@@ -1224,7 +1247,7 @@
 }
 
 .font-33 {
-  font-size: 33rem;
+  font-size: 33px;
 }
 
 .z-index-33 {
@@ -1252,7 +1275,7 @@
 }
 
 .font-34 {
-  font-size: 34rem;
+  font-size: 34px;
 }
 
 .z-index-34 {
@@ -1280,7 +1303,7 @@
 }
 
 .font-35 {
-  font-size: 35rem;
+  font-size: 35px;
 }
 
 .z-index-35 {
@@ -1308,7 +1331,7 @@
 }
 
 .font-36 {
-  font-size: 36rem;
+  font-size: 36px;
 }
 
 .z-index-36 {
@@ -1336,7 +1359,7 @@
 }
 
 .font-37 {
-  font-size: 37rem;
+  font-size: 37px;
 }
 
 .z-index-37 {
@@ -1364,7 +1387,7 @@
 }
 
 .font-38 {
-  font-size: 38rem;
+  font-size: 38px;
 }
 
 .z-index-38 {
@@ -1392,7 +1415,7 @@
 }
 
 .font-39 {
-  font-size: 39rem;
+  font-size: 39px;
 }
 
 .z-index-39 {
@@ -1420,7 +1443,7 @@
 }
 
 .font-40 {
-  font-size: 40rem;
+  font-size: 40px;
 }
 
 .z-index-40 {
@@ -1448,7 +1471,7 @@
 }
 
 .font-41 {
-  font-size: 41rem;
+  font-size: 41px;
 }
 
 .z-index-41 {
@@ -1476,7 +1499,7 @@
 }
 
 .font-42 {
-  font-size: 42rem;
+  font-size: 42px;
 }
 
 .z-index-42 {
@@ -1504,7 +1527,7 @@
 }
 
 .font-43 {
-  font-size: 43rem;
+  font-size: 43px;
 }
 
 .z-index-43 {
@@ -1532,7 +1555,7 @@
 }
 
 .font-44 {
-  font-size: 44rem;
+  font-size: 44px;
 }
 
 .z-index-44 {
@@ -1560,7 +1583,7 @@
 }
 
 .font-45 {
-  font-size: 45rem;
+  font-size: 45px;
 }
 
 .z-index-45 {
@@ -1588,7 +1611,7 @@
 }
 
 .font-46 {
-  font-size: 46rem;
+  font-size: 46px;
 }
 
 .z-index-46 {
@@ -1616,7 +1639,7 @@
 }
 
 .font-47 {
-  font-size: 47rem;
+  font-size: 47px;
 }
 
 .z-index-47 {
@@ -1644,7 +1667,7 @@
 }
 
 .font-48 {
-  font-size: 48rem;
+  font-size: 48px;
 }
 
 .z-index-48 {
@@ -1672,7 +1695,7 @@
 }
 
 .font-49 {
-  font-size: 49rem;
+  font-size: 49px;
 }
 
 .z-index-49 {
@@ -1700,7 +1723,7 @@
 }
 
 .font-50 {
-  font-size: 50rem;
+  font-size: 50px;
 }
 
 .z-index-50 {
@@ -1728,7 +1751,7 @@
 }
 
 .font-51 {
-  font-size: 51rem;
+  font-size: 51px;
 }
 
 .z-index-51 {
@@ -1756,7 +1779,7 @@
 }
 
 .font-52 {
-  font-size: 52rem;
+  font-size: 52px;
 }
 
 .z-index-52 {
@@ -1784,7 +1807,7 @@
 }
 
 .font-53 {
-  font-size: 53rem;
+  font-size: 53px;
 }
 
 .z-index-53 {
@@ -1812,7 +1835,7 @@
 }
 
 .font-54 {
-  font-size: 54rem;
+  font-size: 54px;
 }
 
 .z-index-54 {
@@ -1840,7 +1863,7 @@
 }
 
 .font-55 {
-  font-size: 55rem;
+  font-size: 55px;
 }
 
 .z-index-55 {
@@ -1868,7 +1891,7 @@
 }
 
 .font-56 {
-  font-size: 56rem;
+  font-size: 56px;
 }
 
 .z-index-56 {
@@ -1896,7 +1919,7 @@
 }
 
 .font-57 {
-  font-size: 57rem;
+  font-size: 57px;
 }
 
 .z-index-57 {
@@ -1924,7 +1947,7 @@
 }
 
 .font-58 {
-  font-size: 58rem;
+  font-size: 58px;
 }
 
 .z-index-58 {
@@ -1952,7 +1975,7 @@
 }
 
 .font-59 {
-  font-size: 59rem;
+  font-size: 59px;
 }
 
 .z-index-59 {
@@ -1980,7 +2003,7 @@
 }
 
 .font-60 {
-  font-size: 60rem;
+  font-size: 60px;
 }
 
 .z-index-60 {
@@ -2008,7 +2031,7 @@
 }
 
 .font-61 {
-  font-size: 61rem;
+  font-size: 61px;
 }
 
 .z-index-61 {
@@ -2036,7 +2059,7 @@
 }
 
 .font-62 {
-  font-size: 62rem;
+  font-size: 62px;
 }
 
 .z-index-62 {
@@ -2064,7 +2087,7 @@
 }
 
 .font-63 {
-  font-size: 63rem;
+  font-size: 63px;
 }
 
 .z-index-63 {
@@ -2092,7 +2115,7 @@
 }
 
 .font-64 {
-  font-size: 64rem;
+  font-size: 64px;
 }
 
 .z-index-64 {
@@ -2120,7 +2143,7 @@
 }
 
 .font-65 {
-  font-size: 65rem;
+  font-size: 65px;
 }
 
 .z-index-65 {
@@ -2148,7 +2171,7 @@
 }
 
 .font-66 {
-  font-size: 66rem;
+  font-size: 66px;
 }
 
 .z-index-66 {
@@ -2176,7 +2199,7 @@
 }
 
 .font-67 {
-  font-size: 67rem;
+  font-size: 67px;
 }
 
 .z-index-67 {
@@ -2204,7 +2227,7 @@
 }
 
 .font-68 {
-  font-size: 68rem;
+  font-size: 68px;
 }
 
 .z-index-68 {
@@ -2232,7 +2255,7 @@
 }
 
 .font-69 {
-  font-size: 69rem;
+  font-size: 69px;
 }
 
 .z-index-69 {
@@ -2260,7 +2283,7 @@
 }
 
 .font-70 {
-  font-size: 70rem;
+  font-size: 70px;
 }
 
 .z-index-70 {
@@ -2288,7 +2311,7 @@
 }
 
 .font-71 {
-  font-size: 71rem;
+  font-size: 71px;
 }
 
 .z-index-71 {
@@ -2316,7 +2339,7 @@
 }
 
 .font-72 {
-  font-size: 72rem;
+  font-size: 72px;
 }
 
 .z-index-72 {
@@ -2344,7 +2367,7 @@
 }
 
 .font-73 {
-  font-size: 73rem;
+  font-size: 73px;
 }
 
 .z-index-73 {
@@ -2372,7 +2395,7 @@
 }
 
 .font-74 {
-  font-size: 74rem;
+  font-size: 74px;
 }
 
 .z-index-74 {
@@ -2400,7 +2423,7 @@
 }
 
 .font-75 {
-  font-size: 75rem;
+  font-size: 75px;
 }
 
 .z-index-75 {
@@ -2428,7 +2451,7 @@
 }
 
 .font-76 {
-  font-size: 76rem;
+  font-size: 76px;
 }
 
 .z-index-76 {
@@ -2456,7 +2479,7 @@
 }
 
 .font-77 {
-  font-size: 77rem;
+  font-size: 77px;
 }
 
 .z-index-77 {
@@ -2484,7 +2507,7 @@
 }
 
 .font-78 {
-  font-size: 78rem;
+  font-size: 78px;
 }
 
 .z-index-78 {
@@ -2512,7 +2535,7 @@
 }
 
 .font-79 {
-  font-size: 79rem;
+  font-size: 79px;
 }
 
 .z-index-79 {
@@ -2540,7 +2563,7 @@
 }
 
 .font-80 {
-  font-size: 80rem;
+  font-size: 80px;
 }
 
 .z-index-80 {
@@ -2568,7 +2591,7 @@
 }
 
 .font-81 {
-  font-size: 81rem;
+  font-size: 81px;
 }
 
 .z-index-81 {
@@ -2596,7 +2619,7 @@
 }
 
 .font-82 {
-  font-size: 82rem;
+  font-size: 82px;
 }
 
 .z-index-82 {
@@ -2624,7 +2647,7 @@
 }
 
 .font-83 {
-  font-size: 83rem;
+  font-size: 83px;
 }
 
 .z-index-83 {
@@ -2652,7 +2675,7 @@
 }
 
 .font-84 {
-  font-size: 84rem;
+  font-size: 84px;
 }
 
 .z-index-84 {
@@ -2680,7 +2703,7 @@
 }
 
 .font-85 {
-  font-size: 85rem;
+  font-size: 85px;
 }
 
 .z-index-85 {
@@ -2708,7 +2731,7 @@
 }
 
 .font-86 {
-  font-size: 86rem;
+  font-size: 86px;
 }
 
 .z-index-86 {
@@ -2736,7 +2759,7 @@
 }
 
 .font-87 {
-  font-size: 87rem;
+  font-size: 87px;
 }
 
 .z-index-87 {
@@ -2764,7 +2787,7 @@
 }
 
 .font-88 {
-  font-size: 88rem;
+  font-size: 88px;
 }
 
 .z-index-88 {
@@ -2792,7 +2815,7 @@
 }
 
 .font-89 {
-  font-size: 89rem;
+  font-size: 89px;
 }
 
 .z-index-89 {
@@ -2820,7 +2843,7 @@
 }
 
 .font-90 {
-  font-size: 90rem;
+  font-size: 90px;
 }
 
 .z-index-90 {
@@ -2848,7 +2871,7 @@
 }
 
 .font-91 {
-  font-size: 91rem;
+  font-size: 91px;
 }
 
 .z-index-91 {
@@ -2876,7 +2899,7 @@
 }
 
 .font-92 {
-  font-size: 92rem;
+  font-size: 92px;
 }
 
 .z-index-92 {
@@ -2904,7 +2927,7 @@
 }
 
 .font-93 {
-  font-size: 93rem;
+  font-size: 93px;
 }
 
 .z-index-93 {
@@ -2932,7 +2955,7 @@
 }
 
 .font-94 {
-  font-size: 94rem;
+  font-size: 94px;
 }
 
 .z-index-94 {
@@ -2960,7 +2983,7 @@
 }
 
 .font-95 {
-  font-size: 95rem;
+  font-size: 95px;
 }
 
 .z-index-95 {
@@ -2988,7 +3011,7 @@
 }
 
 .font-96 {
-  font-size: 96rem;
+  font-size: 96px;
 }
 
 .z-index-96 {
@@ -3016,7 +3039,7 @@
 }
 
 .font-97 {
-  font-size: 97rem;
+  font-size: 97px;
 }
 
 .z-index-97 {
@@ -3044,7 +3067,7 @@
 }
 
 .font-98 {
-  font-size: 98rem;
+  font-size: 98px;
 }
 
 .z-index-98 {
@@ -3072,7 +3095,7 @@
 }
 
 .font-99 {
-  font-size: 99rem;
+  font-size: 99px;
 }
 
 .z-index-99 {
@@ -3100,7 +3123,7 @@
 }
 
 .font-100 {
-  font-size: 100rem;
+  font-size: 100px;
 }
 
 .z-index-100 {

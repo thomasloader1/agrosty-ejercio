@@ -7,134 +7,58 @@ block append content
         .row
             .col-12
                 .card.my-5
-                    .card-header.d-flex.justify-content-between.align-items-center
-                        h4.card-title.mb-0.h4 Nueva obserbacion
-                        .btns
-                            a.btn.btn-white.btn-sm(href="#") Volver
-                            a.btn.btn-info.btn-sm(href="#") Guardar observacion
+                    .card-header.d-flex.justify-content-between.align-items-center.w-100
+                        h4.card-title.mb-0.font-weight-bold.text-center Nueva observacion
+                        .d-none.d-md-flex.align-items-stretch.justify-content-end.w-75
+                            a.btn.font-weight-bold.mx-2(href="#") #[p.d-block.my-auto Volver]
+                            a.btn.btn-info.font-weight-bold.mx-2(href="#") Guardar observacion
+                        .d-sm-flex.d-md-none.align-items-center.justify-content-center.flex-column.w-50
+                            a.btn.font-weight-bold.my-2.btn-block(href="#") Volver
+                            a.btn.btn-info.font-weight-bold.my-2.btn-block(href="#") Guardar observacion
                     .card-body
                         form.px-3
                             .form-row.my-3
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="id-accion") ID Accion
-                                        select#id-accion.browser-default.custom-select
-                                            option(selectted) - 
-                                            option(value="1") Uno 
-                                            option(value="2") Dos 
-                                            option(value="3") Tres 
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="date-picker") Fecha
-                                        input#date-picker(type="text", name="date").form-control.datepicker
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="sector") Sector
-                                        select#sector.browser-default.custom-select
-                                            option(selectted) - 
-                                            option(value="1") Galpon Uno 
-                                            option(value="2") Galpon Dos 
-                                            option(value="3") Galpon Tres 
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="riesgo") Riesgo asociado / Estandar
-                                        select#riesgo.browser-default.custom-select
-                                            option(selectted) - 
-                                            option(value="1") Otras formas 1
-                                            option(value="2") Otras formas 2 
-                                            option(value="3") Otras formas 3 
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="nivel-riesgo") Nivel de riesgo
-                                        select#nivel-riesgo.browser-default.custom-select
-                                            option(selectted) - 
-                                            option(value="1") NO ACEPTABLE
-                                            option(value="2") ACEPTABLE 
-                                            option(value="3") A CONFIRMAR 
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="generado") Generado por
-                                        select#generado.browser-default.custom-select
-                                            option(selectted) - 
-                                            option(value="1") Incidentes
-                                            option(value="2") ACEPTABLE 
-                                            option(value="3") A CONFIRMAR 
+                                +customSelect({id:"id-accion", text:"ID Accion"}, ["tres", "dos", "uno"])
+
+                                +customDatepicker({id:"date-picker", text:"Fecha", nameType: "date"})
+                                
+                                +customSelect({id:"sector", text:"Sector"}, ["Galpon Uno", "Galpon Dos", "Galpon Tres"])
+
+                                +customSelect({id:"riesgo", text:"Riesgo asociado / Estandar"}, ["Otras formas 1", "Otras formas 2", "Otras formas 3"])
+                                
+                                +customSelect({id:"nivel-riesgo", text:"Nivel de riesgo"}, ["NO ACEPTABLE", "ACEPTABLE", "A CONFIRMAR"])
+                                
+                                +customSelect({id:"generado", text:"Generado por"}, ["Incidentes", "ACEPTABLE", "A CONFIRMAR"])
+
                             .form-row.my-3
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .form-group.d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="text-area-AC") Accion Correctiva
-                                        textarea.form-control.rounded-0#text-area-AC(rows="3")
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .form-group.d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="text-area-comentario") Comentario
-                                        textarea.form-control.rounded-0#text-area-comentario(rows="3")
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .form-group.d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="text-area-DR") Descripcion del riesgo
-                                        textarea.form-control.rounded-0#text-area-DR(rows="3")
+                                +customTextarea({id:"text-area-AC", text:"Accion Correctiva"})
+                                
+                                +customTextarea({id:"text-area-comentario", text:"Comentario"})
+                                
+                                +customTextarea({id:"text-area-DR", text:"Descripcion del riesgo"})
+
                             .form-row.my-5
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="plazo-ejecucion-inicial") Plazo ejecucion inicial
-                                        input#plazo-ejecucion-inicial(type="text", name="plazo-ejecucion-inicial").form-control.datepicker
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="reprogramacion") Reprogramacion
-                                        input#reprogramacion(type="text", name="reprogramacion").form-control
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="status") Status
-                                        select#status.browser-default.custom-select
-                                            option(selectted) - 
-                                            option(value="1") CUMPLIDO
-                                            option(value="2") PENDIENTE
-                                            option(value="3") ESPERA
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="fecha-cierre") Fecha de cierre
-                                        input#fecha-cierre(type="text", name="fecha-cierre").form-control
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="vencimiento") Vencimiento
-                                        input#vencimiento(type="text", name="vencimiento").form-control
+                                +customDatepicker({id:"plazo-ejecucion-inicial", text:"Plazo ejecucion inicial", nameType: "plazo-ejecucion-inicial"})
+
+                                +customInputText({id:"reprogramacion", text:"Reprogramacion"})
+
+                                +customSelect({id:"status", text:"Status"}, ["CUMPLIDO", "PENDIENTE", "ESPERA"])
+
+                                +customInputText({id:"fecha-cierre", text:"Fecha de cierre"})
+
+                                +customInputText({id:"vencimiento", text:"Vencimiento"})
                             .form-row.my-3
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="res-seguimiento-cierre") Resp. seguimiento y cierre
-                                        input#res-seguimiento-cierre(type="text", name="res-seguimiento-cierre").form-control
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="sector-detecta-obs") Sector que detecta la obs
-                                        select#sector-detecta-obs.browser-default.custom-select
-                                            option(selectted) - 
-                                            option(value="1") 1
-                                            option(value="2") 2
-                                            option(value="3") 3
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="sector-responsable") Sector responsable
-                                        select#sector-responsable.browser-default.custom-select
-                                            option(selectted) - 
-                                            option(value="1") 1
-                                            option(value="2") 2
-                                            option(value="3") 3
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="observacion") Observacion
-                                        textarea.form-control.rounded-0#observacion(rows="1")
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="req-evicencia") Requiere evidencia
-                                        select#req-evicencia.browser-default.custom-select
-                                            option(selectted) - 
-                                            option(value="1") Si
-                                            option(value="2") No
+                                +customInputText({id:"res-seguimiento-cierre", text:"Resp. seguimiento y cierre"})
+
+                                +customSelect({id:"sector-detecta-obs", text:"Sector que detecta la obs"}, ["1", "2", "3"])
+                                
+                                +customSelect({id:"sector-responsable", text:"Sector responsable"}, ["1", "2", "3"])
+
+                                +customTextarea({id:"observacion", text:"Observacion", rows: 1})
+
+                                +customSelect({id:"req-evicencia", text:"Requiere evidencia"}, ["Si", "No"])
+
                             .form-row.my-3
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="evidencia-cierre") Evidencia de cierre
-                                        input#evidencia-cierre(type="text", name="evidencia-cierre").form-control
-                                .col-sm-7.col-md-2.d-flex.align-items-strech.justify-content-center
-                                    .d-flex.align-items-center.justify-content-around.flex-column
-                                        label(for="resp-seguimiento-cierre") Resp seguimiento y cierre
-                                        input#resp-seguimiento-cierre(type="text", name="resp-seguimiento-cierre").form-control
+                                +customInputText({id:"evidencia-cierre", text:"Evidencia de cierre"})
+                                
+                                +customInputText({id:"resp-seguimiento-cierre", text:"Resp seguimiento y cierre"})

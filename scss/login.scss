@@ -1,0 +1,18 @@
+#grid-login{
+    width: 400px;
+    height: 100%;
+    margin:{
+        left: auto;
+        right: auto;
+        top: 3rem;
+    }
+    grid-template: {
+        columns: 1fr;
+        rows: 1fr 200px;
+    };
+
+}
+
+.boldered{
+    border: 10px solid #212121;
+}

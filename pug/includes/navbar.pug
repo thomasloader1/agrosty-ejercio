@@ -1,50 +1,47 @@
-  <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-white z-depth-0">
+<nav class="mb-1 navbar navbar-expand-lg navbar-light white z-depth-0">
   .container
-      <!-- Navbar brand -->
-      <a class="navbar-brand" href="#">
-       img(src="./img/logo.png", alt="Agrosty")
-      </a>
+    <a class="navbar-brand" href="#">
+      img(src="./img/logo.png", alt="Agrosty")
+    </a>
 
-      <!-- Collapse button -->
-      button.navbar-toggler.third-button(type="button", data-toggle="collapse", data-target="#basicExampleNav", aria-controls="basicExampleNav", aria-expanded="false", aria-label="Toggle navigation")
-          .animated-icon3
-            span
-            span
-            span
+    <!-- Collapse button -->
+    button.navbar-toggler.third-button(type="button", data-toggle="collapse", data-target="#basicExampleNav", aria-controls="basicExampleNav", aria-expanded="false", aria-label="Toggle navigation")
+        .animated-icon3
+          span
+          span
+          span
 
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="basicExampleNav">
-
-        <!-- Links -->
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-
-          <!-- Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-
-        </ul>
-        <!-- Links -->
-
-      </div>
-      <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Listado</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Informes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Opciones</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">
+              .d-flex.aling-items-center
+                i.fas.fa-user-circle.fa-lg.my-auto.mr-2
+                .w-100
+                  span.font-14.d-block.font-weight-bold Victor Luna
+                  span.font-12 HSE
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-default"aria-labelledby="navbarDropdownMenuLink-333">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+    </div>
 
 </nav>
-  <!--/.Navbar-->
